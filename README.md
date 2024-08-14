@@ -12,12 +12,11 @@ Generation of the OPC UA Information model from the YANG schema involves a two-s
 
 ![](yangopcua.001.png) 
 
-YANG schema to OPC UA Model Generation
+OPC UA Model Design to OPC UA NodeSet2 XML File generation
 
 ![](yangopcua.002.png)
 
-OPCA UA pyang plugin
 
 **OPC UA – pyang plugin**
 
-Static YANG to OPC UA Model Design Generator is developed based on open-source component pyang and pyang [uml plugin](https://github.com/mbj4668/pyang/blob/master/pyang/plugins/uml.py). The pyang UML plug-in generates a UML class diagram from the YANG file. The YANG parsing logic defined in UML plug-in code is extended, and a new plugin called opcua plugin is created to generate the OPC UA model design file from the YANG File. The opc-ua pyang plugin logic for the generation of OPC UA model design file is based on the YANG to OPC UA mapping developed by the authors.
+Static YANG to OPC UA Model Design Generator is developed based on open-source component pyang and pyang [uml plugin](https://github.com/mbj4668/pyang/blob/master/pyang/plugins/uml.py). The pyang UML plug-in generates a UML class diagram from the YANG file. The YANG parsing logic defined in UML plug-in code is extended, and a new plugin called opcua plugin is created to generate the OPC UA model design file from the YANG File. The opc-ua pyang plugin logic for the generation of OPC UA model design file is based on the YANG to OPC UA mapping developed by the authors. This opcua plugin code will be delivered to pyang project once it is fully validated with all scenarios.
