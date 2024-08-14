@@ -1,0 +1,60 @@
+module simple-example {
+  yang-version 1.1;
+  namespace "http://example.com/simple-example/";
+  prefix simex;
+  container bag {
+    list foo {
+      key "number";
+      leaf number {
+        type uint64;
+      }
+      leaf prime {
+        type boolean;
+      }
+      leaf in-words {
+        type string;
+      }
+    }
+  }
+  grouping my-grouping {
+	  leaf name {
+		  type string;
+		  default "group-1";
+		  description "This is group name";
+	  }
+	  leaf value {
+		  type int32;
+		  default "10";
+		  description "Number of person in a group";
+	  }
+  }
+  container example-container {
+	  uses my-grouping;
+  }
+  typedef ipv4-address {
+    type string;
+    default "127.0.0.0";
+	  description "IPv4 address";
+  }
+  leaf-list list-of-ports {
+	  type string;
+	  config true;
+	  description "List of ports the server to use";
+  }
+  rpc update-software {
+   input {
+      leaf software-input-path {
+		    type string;
+		    default "/home/ubuntu/software";
+		    description "Software input path";
+	    }
+   }
+   output {
+     leaf software-output-path {
+		   type string;
+		   default "/home/ubuntu/output/software";
+		   description "Software output path";
+	   }
+   }
+  }
+}
