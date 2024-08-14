@@ -10,11 +10,11 @@ Private 5G networks, also referred to as Non-Public Networks, have become the de
 
 Generation of the OPC UA Information model from the YANG schema involves a two-step approach. First, the YANG file is passed to the pyang opc-ua plugin to generate the OPC UA model design XML file that conforms to the schema defined in the UA Model Design.XSD. Then, the OPC UA model design XML file is passed to the OPC foundation model compiler to generate the OPC UA NodeSet2 XML Files and different language SDK files.
 
-![](yangopcua.001.png) 
+![](images/yangopcua.001.png) 
 
 YANG schema to OPC UA Model Generation
 
-![](yangopcua.002.png)
+![](images/yangopcua.002.png)
 
 OPCA UA pyang plugin
 
