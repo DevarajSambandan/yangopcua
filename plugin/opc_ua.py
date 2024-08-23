@@ -1,5 +1,6 @@
 """opc_ua output plugin
 1) Invoke with:
+>pyang -f opc_ua <file.yang> > <modeldesign.xml>
 """
 
 from pyang import error
@@ -66,6 +67,7 @@ class OPCUAEmitter:
             self.emit_module_header(module, fd)
             for s in module.substmts:
                 self.emit_stmt(module, s, fd)
+            self.emit_module_footer(module, fd)
 
             # print('!!!!!!!!!! Substatements !!!!!!!!!')
             # for s in module.substmts:
@@ -149,6 +151,7 @@ class OPCUAEmitter:
                  '        <opc:Namespace Name=\"%s\" Prefix=\"%s\" XmlPrefix=\"%s\">%s</opc:Namespace>\n'
                  '    </opc:Namespaces>\n\n' % (namespace_name, prefix, prefix, namespace))
 
+    def emit_module_footer(self, module, fd):
         fd.write('</opc:ModelDesign>')
 
     def emit_container(self, node, fd, num_space):
