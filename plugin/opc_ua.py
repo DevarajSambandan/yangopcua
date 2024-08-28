@@ -149,7 +149,22 @@ class OPCUAEmitter:
 
         fd.write('    <opc:Namespaces>\n'
                  '        <opc:Namespace Name=\"%s\" Prefix=\"%s\" XmlPrefix=\"%s\">%s</opc:Namespace>\n'
-                 '    </opc:Namespaces>\n\n' % (namespace_name, prefix, prefix, namespace))
+                 '%s'
+                 '    </opc:Namespaces>\n\n' % (
+                     namespace_name, prefix, prefix, namespace, self.emit_import_include(module, fd)))
+
+    def emit_import_include(self, module, fd):
+        namespace = 'http://opcfoundation.org/UA/default/'
+        temp_str = ''
+        if module.search('import') is not None or module.search('include') is not None:
+            for stmt in module.substmts:
+                if stmt.keyword == 'import' or stmt.keyword == 'include':
+                    for s in stmt.substmts:
+                        import_name = stmt.arg
+                        prefix = s.arg
+                        temp_str += f'        <opc:Namespace Name="{import_name}" Prefix="{prefix}" XmlPrefix="{prefix}">{namespace}</opc:Namespace>\n'
+
+        return temp_str
 
     def emit_module_footer(self, module, fd):
         fd.write('</opc:ModelDesign>')
