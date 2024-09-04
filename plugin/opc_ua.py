@@ -31,6 +31,8 @@ yang_to_opcua_data_type = {
     "union": "Union"
 }
 
+custom_typedef_data_types = []
+
 
 class OPCUAPlugin(plugin.PyangPlugin):
     def add_output_format(self, fmts):
@@ -195,6 +197,7 @@ class OPCUAEmitter:
         spaces = ' ' * num_space
         leaf_name = node.arg
         leaf_type = yang_to_opcua_data_type.get(node.search_one('type').arg, 'Unknown OPC UA data type')
+        data_type = 'ua:' + leaf_type
         leaf_default_value = None
         leaf_description = None
         leaf_property = 'Property'
@@ -211,8 +214,11 @@ class OPCUAEmitter:
         if node.search_one('description') is not None:
             leaf_description = node.search_one('description').arg
 
+        if leaf_type == 'Unknown OPC UA data type' and (node.search_one('type').arg in custom_typedef_data_types):
+            data_type = node.search_one('type').arg
+
         fd.write(
-            f'{spaces}<opc:{leaf_property} SymbolicName="{convert_to_camel_case(leaf_name)}" DataType="{leaf_type}" AccessLevel="Read"> \n')
+            f'{spaces}<opc:{leaf_property} SymbolicName="{convert_to_camel_case(leaf_name)}" DataType="{data_type}" AccessLevel="Read"> \n')
         if leaf_default_value is not None:
             fd.write(
                 f'{spaces}  <opc:DefaultValue> <uax:{leaf_type}>{leaf_default_value}</uax:{leaf_type}> </opc:DefaultValue>\n')
@@ -280,8 +286,9 @@ class OPCUAEmitter:
 
             else:
                 typedef_type = yang_to_opcua_data_type.get(node.search_one('type').arg, "Unknown OpcUa data type")
-                if typedef_type != 'Unknown OpcUa data type':
-                    yang_to_opcua_data_type[typedef_type] = typedef_type
+                if typedef_type == 'Unknown OpcUa data type':
+                    typedef_type = node.search_one('type').arg
+                    custom_typedef_data_types.append(typedef_type)
 
         fd.write(
             f'{spaces}<opc:DataType SymbolicName="{convert_to_camel_case(typedef_name)}" BaseType="ua:{typedef_type}"> \n')
