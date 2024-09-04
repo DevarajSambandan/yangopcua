@@ -5,91 +5,93 @@
     xmlns:ua="http://opcfoundation.org/UA/"
     xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types"
-    TargetNamespace="urn:3gpp:sa5:_3gpp-5g-common-yang-types"
+    xmlns="http://example.com/simple-example/"
+    TargetNamespace="http://example.com/simple-example/"
     TargetVersion="1.0">
 
     <opc:Namespaces>
-        <opc:Namespace Name="_3gpp-5g-common-yang-types" Prefix="type5g3gpp" XmlPrefix="type5g3gpp">urn:3gpp:sa5:_3gpp-5g-common-yang-types</opc:Namespace>
-        <opc:Namespace Name="_3gpp-common-yang-types" Prefix="types3gpp" XmlPrefix="types3gpp">http://opcfoundation.org/UA/default/</opc:Namespace>
-        <opc:Namespace Name="_3gpp-5gc-nrm-affunction" Prefix="af3gpp" XmlPrefix="af3gpp">http://opcfoundation.org/UA/default/</opc:Namespace>
+        <opc:Namespace Name="simple-example" Prefix="simex" XmlPrefix="simex">http://example.com/simple-example/</opc:Namespace>
     </opc:Namespaces>
 
-    <opc:ObjectType SymbolicName="SnssaiType" BaseType="ua:BaseObjectType">
+    <opc:ObjectType SymbolicName="BagType" BaseType="ua:BaseObjectType">
       <opc:Children>
-        <opc:Property SymbolicName="Sd" DataType="String" AccessLevel="Read"> 
-          <opc:Description>Slice Differentiator
-If not needed, the value can be set to FFFFFF.</opc:Description>
+          <opc:ObjectType SymbolicName="FooEntryType" BaseType="ua:BaseObjectType">
+            <opc:Children>
+                <opc:Property SymbolicName="Number" DataType="ua:UInt64" AccessLevel="Read"> 
+                </opc:Property>
+                <opc:Property SymbolicName="Prime" DataType="ua:Boolean" AccessLevel="Read"> 
+                </opc:Property>
+                <opc:Property SymbolicName="InWords" DataType="ua:String" AccessLevel="Read"> 
+                </opc:Property>
+            </opc:Children>
+          </opc:ObjectType>
+          <opc:ObjectType SymbolicName="FooType" BaseType="ua:BaseObjectType">
+            <opc:Children>
+              <opc:ReferenceType TypeDefinition="FooEntryType"/>
+            </opc:Children>
+          </opc:ObjectType>
+      </opc:Children>
+    </opc:ObjectType>
+
+    <opc:Object SymbolicName="Bag" TypeDefinition="BagType">
+      <opc:Children>
+        <opc:References>
+          <opc:Reference IsInverse="true">
+            <opc:ReferenceType>SignalTo</opc:ReferenceType>
+          </opc:Reference>
+        </opc:References>
+      </opc:Children>
+    </opc:Object>
+    <opc:ObjectType SymbolicName="MyGroupingType" BaseType="ua:BaseObjectType">
+      <opc:Children>
+        <opc:Property SymbolicName="Name" DataType="ua:String" AccessLevel="Read"> 
+          <opc:DefaultValue> <uax:String>group-1</uax:String> </opc:DefaultValue>
+          <opc:Description>This is group name</opc:Description>
         </opc:Property>
-        <opc:Property SymbolicName="Sst" DataType="Byte" AccessLevel="Read"> 
-          <opc:Description>Slice/Service Type.
-Values 0 to 127 belong to standardized SST range and are defined in
-3GPP TS 23.501. Values 128 to 255 belong to operator-specific range.</opc:Description>
+        <opc:Property SymbolicName="Value" DataType="ua:Int32" AccessLevel="Read"> 
+          <opc:DefaultValue> <uax:Int32>10</uax:Int32> </opc:DefaultValue>
+          <opc:Description>Number of person in a group</opc:Description>
         </opc:Property>
       </opc:Children>
     </opc:ObjectType>
 
-    <opc:ObjectType SymbolicName="PlmninfoType" BaseType="ua:BaseObjectType">
+    <opc:ObjectType SymbolicName="ExampleContainerType" BaseType="ua:BaseObjectType">
       <opc:Children>
-        <opc:Object SymbolicName="Types3gpp:plmnid" TypeDefinition="Types3gpp:plmnidType">
-        </opc:Object>
-        <opc:Object SymbolicName="Snssai" TypeDefinition="SnssaiType">
-        </opc:Object>
+          <opc:Object SymbolicName="MyGrouping" TypeDefinition="MyGroupingType">
+          </opc:Object>
       </opc:Children>
     </opc:ObjectType>
 
-    <opc:DataType SymbolicName="CommmodeltypeType" BaseType="ua:Enumeration"> 
-      <opc:Fields>
-        <opc:Field Name="enum DIRECT_COMMUNICATION_WO_NRF"  Identifier="0"  Description="Directly communicate to other pre-configured NF service." />
-        <opc:Field Name="enum DIRECT_COMMUNICATION_WITH_NRF"  Identifier="1"  Description="Directly communicate to other NF service discovered
-by NRF." />
-        <opc:Field Name="enum INDIRECT_COMMUNICATION_WO_DEDICATED_DISCOVERY"  Identifier="2"  Description="Communicate to pre-configured other NF service through
-SCP as a proxy." />
-        <opc:Field Name="enum INDIRECT_COMMUNICATION_WITH_DEDICATED_DISCOVERY"  Identifier="3"  Description="Communication to NF service discovered by NRF through SCP
-as a proxy." />
-      </opc:Fields>
-    </opc:DataType>
-    <opc:ObjectType SymbolicName="CommmodelType" BaseType="ua:BaseObjectType">
+    <opc:Object SymbolicName="ExampleContainer" TypeDefinition="ExampleContainerType">
       <opc:Children>
-        <opc:Property SymbolicName="Groupid" DataType="UInt16" AccessLevel="Read"> 
-        </opc:Property>
-        <opc:Property SymbolicName="Commmodeltype" DataType="Unknown OPC UA data type" AccessLevel="Read"> 
-        </opc:Property>
-        <opc:Property SymbolicName="Targetnfservicelist" DataType="Unknown OPC UA data type" AccessLevel="Read"> 
-        </opc:Property>
-        <opc:Property SymbolicName="Commmodelconfiguration" DataType="String" AccessLevel="Read"> 
-        </opc:Property>
+        <opc:References>
+          <opc:Reference IsInverse="true">
+            <opc:ReferenceType>SignalTo</opc:ReferenceType>
+          </opc:Reference>
+        </opc:References>
       </opc:Children>
-    </opc:ObjectType>
+    </opc:Object>
+    <opc:DataType SymbolicName="Ipv4Address" BaseType="ua:String"> 
+      <opc:DefaultValue> <uax:String>127.0.0.0</uax:String> </opc:DefaultValue>
+      <opc:Description>IPv4 address</opc:Description>
+    </opc:DataType>
+    <opc:Variable SymbolicName="ListOfPorts" DataType="ua:String" AccessLevel="Read"> 
+      <opc:Description>List of ports the server to use</opc:Description>
+    </opc:Variable>
 
-    <opc:ObjectType SymbolicName="SupportedfuncType" BaseType="ua:BaseObjectType">
-      <opc:Children>
-        <opc:Property SymbolicName="Function" DataType="String" AccessLevel="Read"> 
-        </opc:Property>
-        <opc:Property SymbolicName="Policy" DataType="String" AccessLevel="Read"> 
-        </opc:Property>
-      </opc:Children>
-    </opc:ObjectType>
+    <opc:Method SymbolicName="UpdateSoftware" ModellingRule="Mandatory">
+      <opc:InputArguments>
+          <opc:Argument SymbolicName="SoftwareInputPath" DataType="ua:String" AccessLevel="Read"> 
+            <opc:DefaultValue> <uax:String>/home/ubuntu/software</uax:String> </opc:DefaultValue>
+            <opc:Description>Software input path</opc:Description>
+          </opc:Argument>
+      </opc:InputArguments>
+      <opc:OutputArguments>
+          <opc:Argument SymbolicName="SoftwareOutputPath" DataType="ua:String" AccessLevel="Read"> 
+            <opc:DefaultValue> <uax:String>/home/ubuntu/output/software</uax:String> </opc:DefaultValue>
+            <opc:Description>Software output path</opc:Description>
+          </opc:Argument>
+      </opc:OutputArguments>
+    </opc:Method>
 
-    <opc:DataType SymbolicName="Energysavingloadthresholdt" BaseType="ua:UInt32"> 
-    </opc:DataType>
-    <opc:DataType SymbolicName="Energysavingtimedurationt" BaseType="ua:UInt32"> 
-    </opc:DataType>
-    <opc:DataType SymbolicName="Physcellid" BaseType="ua:UInt32"> 
-    </opc:DataType>
-    <opc:DataType SymbolicName="Utc24timeofdayt" BaseType="ua:String"> 
-      <opc:Description>Time of day in HH:MM or H:MM 24-hour format per UTC
-time zone.</opc:Description>
-    </opc:DataType>
-    <opc:DataType SymbolicName="DayofweektType" BaseType="ua:Enumeration"> 
-      <opc:Fields>
-        <opc:Field Name="enum Monday" />
-        <opc:Field Name="enum Tuesday" />
-        <opc:Field Name="enum Wednesday" />
-        <opc:Field Name="enum Thursday" />
-        <opc:Field Name="enum Friday" />
-        <opc:Field Name="enum Saturday" />
-        <opc:Field Name="enum Sunday" />
-      </opc:Fields>
-    </opc:DataType>
 </opc:ModelDesign>

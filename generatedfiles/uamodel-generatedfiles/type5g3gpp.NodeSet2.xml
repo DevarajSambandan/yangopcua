@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
+  <NamespaceUris>
+    <Uri>urn:3gpp:sa5:_3gpp-5g-common-yang-types</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="urn:3gpp:sa5:_3gpp-5g-common-yang-types" Version="1.0">
+      <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.04.7" PublicationDate="2020-04-14T00:00:00Z" />
+    </Model>
+  </Models>
+  <Aliases>
+    <Alias Alias="Boolean">i=1</Alias>
+    <Alias Alias="SByte">i=2</Alias>
+    <Alias Alias="Byte">i=3</Alias>
+    <Alias Alias="Int16">i=4</Alias>
+    <Alias Alias="UInt16">i=5</Alias>
+    <Alias Alias="Int32">i=6</Alias>
+    <Alias Alias="UInt32">i=7</Alias>
+    <Alias Alias="Int64">i=8</Alias>
+    <Alias Alias="UInt64">i=9</Alias>
+    <Alias Alias="Float">i=10</Alias>
+    <Alias Alias="Double">i=11</Alias>
+    <Alias Alias="DateTime">i=13</Alias>
+    <Alias Alias="String">i=12</Alias>
+    <Alias Alias="ByteString">i=15</Alias>
+    <Alias Alias="Guid">i=14</Alias>
+    <Alias Alias="XmlElement">i=16</Alias>
+    <Alias Alias="NodeId">i=17</Alias>
+    <Alias Alias="ExpandedNodeId">i=18</Alias>
+    <Alias Alias="QualifiedName">i=20</Alias>
+    <Alias Alias="LocalizedText">i=21</Alias>
+    <Alias Alias="StatusCode">i=19</Alias>
+    <Alias Alias="Structure">i=22</Alias>
+    <Alias Alias="Number">i=26</Alias>
+    <Alias Alias="Integer">i=27</Alias>
+    <Alias Alias="UInteger">i=28</Alias>
+    <Alias Alias="HasComponent">i=47</Alias>
+    <Alias Alias="HasProperty">i=46</Alias>
+    <Alias Alias="Organizes">i=35</Alias>
+    <Alias Alias="HasEventSource">i=36</Alias>
+    <Alias Alias="HasNotifier">i=48</Alias>
+    <Alias Alias="HasSubtype">i=45</Alias>
+    <Alias Alias="HasTypeDefinition">i=40</Alias>
+    <Alias Alias="HasModellingRule">i=37</Alias>
+    <Alias Alias="HasEncoding">i=38</Alias>
+    <Alias Alias="HasDescription">i=39</Alias>
+  </Aliases>
+  <UAObjectType NodeId="ns=1;i=15020" BrowseName="1:SnssaiType">
+    <DisplayName>SnssaiType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15021</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15022</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+    </References>
+  </UAObjectType>
+  <UAVariable NodeId="ns=1;i=15021" BrowseName="1:Sd" ParentNodeId="ns=1;i=15020" DataType="String">
+    <DisplayName>Sd</DisplayName>
+    <Description>Slice Differentiator
+If not needed, the value can be set to FFFFFF.</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15020</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15022" BrowseName="1:Sst" ParentNodeId="ns=1;i=15020" DataType="Byte">
+    <DisplayName>Sst</DisplayName>
+    <Description>Slice/Service Type.
+Values 0 to 127 belong to standardized SST range and are defined in
+3GPP TS 23.501. Values 128 to 255 belong to operator-specific range.</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15020</Reference>
+    </References>
+  </UAVariable>
+  <UADataType NodeId="ns=1;i=15001" BrowseName="1:CommmodeltypeType">
+    <DisplayName>CommmodeltypeType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15002</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+    </References>
+    <Definition Name="1:CommmodeltypeType">
+      <Field Name="enum DIRECT_COMMUNICATION_WO_NRF" Value="0" />
+      <Field Name="enum DIRECT_COMMUNICATION_WITH_NRF" Value="1" />
+      <Field Name="enum INDIRECT_COMMUNICATION_WO_DEDICATED_DISCOVERY" Value="2" />
+      <Field Name="enum INDIRECT_COMMUNICATION_WITH_DEDICATED_DISCOVERY" Value="3" />
+    </Definition>
+  </UADataType>
+  <UAVariable NodeId="ns=1;i=15002" BrowseName="EnumStrings" ParentNodeId="ns=1;i=15001" DataType="LocalizedText" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>EnumStrings</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15001</Reference>
+    </References>
+    <Value>
+      <ListOfLocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <LocalizedText>
+          <Locale>
+          </Locale>
+          <Text>enum DIRECT_COMMUNICATION_WO_NRF</Text>
+        </LocalizedText>
+        <LocalizedText>
+          <Locale>
+          </Locale>
+          <Text>enum DIRECT_COMMUNICATION_WITH_NRF</Text>
+        </LocalizedText>
+        <LocalizedText>
+          <Locale>
+          </Locale>
+          <Text>enum INDIRECT_COMMUNICATION_WO_DEDICATED_DISCOVERY</Text>
+        </LocalizedText>
+        <LocalizedText>
+          <Locale>
+          </Locale>
+          <Text>enum INDIRECT_COMMUNICATION_WITH_DEDICATED_DISCOVERY</Text>
+        </LocalizedText>
+      </ListOfLocalizedText>
+    </Value>
+  </UAVariable>
+  <UAObjectType NodeId="ns=1;i=15017" BrowseName="1:SupportedfuncType">
+    <DisplayName>SupportedfuncType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15018</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15019</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+    </References>
+  </UAObjectType>
+  <UAVariable NodeId="ns=1;i=15018" BrowseName="1:Function" ParentNodeId="ns=1;i=15017" DataType="String">
+    <DisplayName>Function</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15017</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15019" BrowseName="1:Policy" ParentNodeId="ns=1;i=15017" DataType="String">
+    <DisplayName>Policy</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15017</Reference>
+    </References>
+  </UAVariable>
+  <UAObjectType NodeId="ns=1;i=15023" BrowseName="1:CommmodelType">
+    <DisplayName>CommmodelType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15024</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15025</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15026</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15027</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+    </References>
+  </UAObjectType>
+  <UAVariable NodeId="ns=1;i=15024" BrowseName="1:Groupid" ParentNodeId="ns=1;i=15023" DataType="UInt16">
+    <DisplayName>Groupid</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15023</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15025" BrowseName="1:Commmodeltype" ParentNodeId="ns=1;i=15023" DataType="ns=1;i=15001">
+    <DisplayName>Commmodeltype</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15023</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15026" BrowseName="1:Targetnfservicelist" ParentNodeId="ns=1;i=15023" DataType="ns=1;i=15001">
+    <DisplayName>Targetnfservicelist</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15023</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15027" BrowseName="1:Commmodelconfiguration" ParentNodeId="ns=1;i=15023" DataType="String">
+    <DisplayName>Commmodelconfiguration</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15023</Reference>
+    </References>
+  </UAVariable>
+  <UADataType NodeId="ns=1;i=15003" BrowseName="1:Energysavingloadthresholdt">
+    <DisplayName>Energysavingloadthresholdt</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=7</Reference>
+    </References>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=15004" BrowseName="1:Energysavingtimedurationt">
+    <DisplayName>Energysavingtimedurationt</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=7</Reference>
+    </References>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=15005" BrowseName="1:Physcellid">
+    <DisplayName>Physcellid</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=7</Reference>
+    </References>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=15006" BrowseName="1:Utc24timeofdayt">
+    <DisplayName>Utc24timeofdayt</DisplayName>
+    <Description>Time of day in HH:MM or H:MM 24-hour format per UTC
+time zone.</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=12</Reference>
+    </References>
+  </UADataType>
+  <UADataType NodeId="ns=1;i=15007" BrowseName="1:DayofweektType">
+    <DisplayName>DayofweektType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15008</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=29</Reference>
+    </References>
+    <Definition Name="1:DayofweektType">
+      <Field Name="enum Monday" Value="1" />
+      <Field Name="enum Tuesday" Value="2" />
+      <Field Name="enum Wednesday" Value="3" />
+      <Field Name="enum Thursday" Value="4" />
+      <Field Name="enum Friday" Value="5" />
+      <Field Name="enum Saturday" Value="6" />
+      <Field Name="enum Sunday" Value="7" />
+    </Definition>
+  </UADataType>
+  <UAVariable NodeId="ns=1;i=15008" BrowseName="EnumValues" ParentNodeId="ns=1;i=15007" DataType="i=7594" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>EnumValues</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15007</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=7616</Identifier>
+          </TypeId>
+          <Body>
+            <EnumValueType>
+              <Value>1</Value>
+              <DisplayName>
+                <Locale>
+                </Locale>
+                <Text>enum Monday</Text>
+              </DisplayName>
+            </EnumValueType>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=7616</Identifier>
+          </TypeId>
+          <Body>
+            <EnumValueType>
+              <Value>2</Value>
+              <DisplayName>
+                <Locale>
+                </Locale>
+                <Text>enum Tuesday</Text>
+              </DisplayName>
+            </EnumValueType>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=7616</Identifier>
+          </TypeId>
+          <Body>
+            <EnumValueType>
+              <Value>3</Value>
+              <DisplayName>
+                <Locale>
+                </Locale>
+                <Text>enum Wednesday</Text>
+              </DisplayName>
+            </EnumValueType>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=7616</Identifier>
+          </TypeId>
+          <Body>
+            <EnumValueType>
+              <Value>4</Value>
+              <DisplayName>
+                <Locale>
+                </Locale>
+                <Text>enum Thursday</Text>
+              </DisplayName>
+            </EnumValueType>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=7616</Identifier>
+          </TypeId>
+          <Body>
+            <EnumValueType>
+              <Value>5</Value>
+              <DisplayName>
+                <Locale>
+                </Locale>
+                <Text>enum Friday</Text>
+              </DisplayName>
+            </EnumValueType>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=7616</Identifier>
+          </TypeId>
+          <Body>
+            <EnumValueType>
+              <Value>6</Value>
+              <DisplayName>
+                <Locale>
+                </Locale>
+                <Text>enum Saturday</Text>
+              </DisplayName>
+            </EnumValueType>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=7616</Identifier>
+          </TypeId>
+          <Body>
+            <EnumValueType>
+              <Value>7</Value>
+              <DisplayName>
+                <Locale>
+                </Locale>
+                <Text>enum Sunday</Text>
+              </DisplayName>
+            </EnumValueType>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15009" BrowseName="1:type5g3gpp" SymbolicName="_3gpp-5g-common-yang-types_BinarySchema" DataType="ByteString">
+    <DisplayName>type5g3gpp</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15011</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15012</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">i=93</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+    </References>
+    <Value>
+      <ByteString xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PG9wYzpUeXBlRGljdGlvbmFyeQ0KICB4bWxuczp0eXBlczNncHA9Imh0dHA6Ly9vcGNmb3VuZGF0
+aW9uLm9yZy9VQS9kZWZhdWx0LyINCiAgeG1sbnM6b3BjPSJodHRwOi8vb3BjZm91bmRhdGlvbi5v
+cmcvQmluYXJ5U2NoZW1hLyINCiAgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hN
+TFNjaGVtYS1pbnN0YW5jZSINCiAgeG1sbnM6dWE9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9V
+QS8iDQogIHhtbG5zOnRucz0idXJuOjNncHA6c2E1Ol8zZ3BwLTVnLWNvbW1vbi15YW5nLXR5cGVz
+Ig0KICBEZWZhdWx0Qnl0ZU9yZGVyPSJMaXR0bGVFbmRpYW4iDQogIFRhcmdldE5hbWVzcGFjZT0i
+dXJuOjNncHA6c2E1Ol8zZ3BwLTVnLWNvbW1vbi15YW5nLXR5cGVzIg0KPg0KICA8b3BjOkltcG9y
+dCBOYW1lc3BhY2U9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9VQS9kZWZhdWx0LyIgTG9jYXRp
+b249InR5cGVzM2dwcC5CaW5hcnlTY2hlbWEuYnNkIi8+DQoNCiAgPG9wYzpFbnVtZXJhdGVkVHlw
+ZSBOYW1lPSJDb21tbW9kZWx0eXBlVHlwZSIgTGVuZ3RoSW5CaXRzPSIzMiI+DQogICAgPG9wYzpF
+bnVtZXJhdGVkVmFsdWUgTmFtZT0iZW51bSBESVJFQ1RfQ09NTVVOSUNBVElPTl9XT19OUkYiIFZh
+bHVlPSIwIiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9ImVudW0gRElSRUNUX0NP
+TU1VTklDQVRJT05fV0lUSF9OUkYiIFZhbHVlPSIxIiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZh
+bHVlIE5hbWU9ImVudW0gSU5ESVJFQ1RfQ09NTVVOSUNBVElPTl9XT19ERURJQ0FURURfRElTQ09W
+RVJZIiBWYWx1ZT0iMiIgLz4NCiAgICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJlbnVtIElO
+RElSRUNUX0NPTU1VTklDQVRJT05fV0lUSF9ERURJQ0FURURfRElTQ09WRVJZIiBWYWx1ZT0iMyIg
+Lz4NCiAgPC9vcGM6RW51bWVyYXRlZFR5cGU+DQoNCiAgPG9wYzpPcGFxdWVUeXBlIE5hbWU9IkVu
+ZXJneXNhdmluZ2xvYWR0aHJlc2hvbGR0Ij4NCiAgPC9vcGM6T3BhcXVlVHlwZT4NCg0KICA8b3Bj
+Ok9wYXF1ZVR5cGUgTmFtZT0iRW5lcmd5c2F2aW5ndGltZWR1cmF0aW9udCI+DQogIDwvb3BjOk9w
+YXF1ZVR5cGU+DQoNCiAgPG9wYzpPcGFxdWVUeXBlIE5hbWU9IlBoeXNjZWxsaWQiPg0KICA8L29w
+YzpPcGFxdWVUeXBlPg0KDQogIDxvcGM6T3BhcXVlVHlwZSBOYW1lPSJVdGMyNHRpbWVvZmRheXQi
+Pg0KICAgIDxvcGM6RG9jdW1lbnRhdGlvbj5UaW1lIG9mIGRheSBpbiBISDpNTSBvciBIOk1NIDI0
+LWhvdXIgZm9ybWF0IHBlciBVVEMKdGltZSB6b25lLjwvb3BjOkRvY3VtZW50YXRpb24+DQogIDwv
+b3BjOk9wYXF1ZVR5cGU+DQoNCiAgPG9wYzpFbnVtZXJhdGVkVHlwZSBOYW1lPSJEYXlvZndlZWt0
+VHlwZSIgTGVuZ3RoSW5CaXRzPSIzMiI+DQogICAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0i
+ZW51bSBNb25kYXkiIFZhbHVlPSIxIiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9
+ImVudW0gVHVlc2RheSIgVmFsdWU9IjIiIC8+DQogICAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFt
+ZT0iZW51bSBXZWRuZXNkYXkiIFZhbHVlPSIzIiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZhbHVl
+IE5hbWU9ImVudW0gVGh1cnNkYXkiIFZhbHVlPSI0IiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZh
+bHVlIE5hbWU9ImVudW0gRnJpZGF5IiBWYWx1ZT0iNSIgLz4NCiAgICA8b3BjOkVudW1lcmF0ZWRW
+YWx1ZSBOYW1lPSJlbnVtIFNhdHVyZGF5IiBWYWx1ZT0iNiIgLz4NCiAgICA8b3BjOkVudW1lcmF0
+ZWRWYWx1ZSBOYW1lPSJlbnVtIFN1bmRheSIgVmFsdWU9IjciIC8+DQogIDwvb3BjOkVudW1lcmF0
+ZWRUeXBlPg0KDQo8L29wYzpUeXBlRGljdGlvbmFyeT4=</ByteString>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15011" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=15009" DataType="String">
+    <DisplayName>NamespaceUri</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15009</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">urn:3gpp:sa5:_3gpp-5g-common-yang-types</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15012" BrowseName="Deprecated" ParentNodeId="ns=1;i=15009" DataType="Boolean">
+    <DisplayName>Deprecated</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15009</Reference>
+    </References>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">true</Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15013" BrowseName="1:type5g3gpp" SymbolicName="_3gpp-5g-common-yang-types_XmlSchema" DataType="ByteString">
+    <DisplayName>type5g3gpp</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15015</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15016</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">i=92</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+    </References>
+    <Value>
+      <ByteString xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PHhzOnNjaGVtYQ0KICB4bWxuczp0eXBlczNncHA9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9V
+QS9kZWZhdWx0LyINCiAgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1h
+Ig0KICB4bWxuczp1YT0iaHR0cDovL29wY2ZvdW5kYXRpb24ub3JnL1VBLzIwMDgvMDIvVHlwZXMu
+eHNkIg0KICB4bWxuczp0bnM9InVybjozZ3BwOnNhNTpfM2dwcC01Zy1jb21tb24teWFuZy10eXBl
+cyINCiAgdGFyZ2V0TmFtZXNwYWNlPSJ1cm46M2dwcDpzYTU6XzNncHAtNWctY29tbW9uLXlhbmct
+dHlwZXMiDQogIGVsZW1lbnRGb3JtRGVmYXVsdD0icXVhbGlmaWVkIg0KPg0KICA8eHM6aW1wb3J0
+IG5hbWVzcGFjZT0iaHR0cDovL29wY2ZvdW5kYXRpb24ub3JnL1VBL2RlZmF1bHQvIiAvPg0KDQog
+IDx4czpzaW1wbGVUeXBlICBuYW1lPSJDb21tbW9kZWx0eXBlVHlwZSI+DQogICAgPHhzOnJlc3Ry
+aWN0aW9uIGJhc2U9InhzOnN0cmluZyI+DQogICAgICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9ImVu
+dW0gRElSRUNUX0NPTU1VTklDQVRJT05fV09fTlJGXzAiIC8+DQogICAgICA8eHM6ZW51bWVyYXRp
+b24gdmFsdWU9ImVudW0gRElSRUNUX0NPTU1VTklDQVRJT05fV0lUSF9OUkZfMSIgLz4NCiAgICAg
+IDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51bSBJTkRJUkVDVF9DT01NVU5JQ0FUSU9OX1dPX0RF
+RElDQVRFRF9ESVNDT1ZFUllfMiIgLz4NCiAgICAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51
+bSBJTkRJUkVDVF9DT01NVU5JQ0FUSU9OX1dJVEhfREVESUNBVEVEX0RJU0NPVkVSWV8zIiAvPg0K
+ICAgIDwveHM6cmVzdHJpY3Rpb24+DQogIDwveHM6c2ltcGxlVHlwZT4NCiAgPHhzOmVsZW1lbnQg
+bmFtZT0iQ29tbW1vZGVsdHlwZVR5cGUiIHR5cGU9InRuczpDb21tbW9kZWx0eXBlVHlwZSIgLz4N
+Cg0KICA8eHM6Y29tcGxleFR5cGUgbmFtZT0iTGlzdE9mQ29tbW1vZGVsdHlwZVR5cGUiPg0KICAg
+IDx4czpzZXF1ZW5jZT4NCiAgICAgIDx4czplbGVtZW50IG5hbWU9IkNvbW1tb2RlbHR5cGVUeXBl
+IiB0eXBlPSJ0bnM6Q29tbW1vZGVsdHlwZVR5cGUiIG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1
+bmJvdW5kZWQiIC8+DQogICAgPC94czpzZXF1ZW5jZT4NCiAgPC94czpjb21wbGV4VHlwZT4NCiAg
+PHhzOmVsZW1lbnQgbmFtZT0iTGlzdE9mQ29tbW1vZGVsdHlwZVR5cGUiIHR5cGU9InRuczpMaXN0
+T2ZDb21tbW9kZWx0eXBlVHlwZSIgbmlsbGFibGU9InRydWUiPjwveHM6ZWxlbWVudD4NCg0KICA8
+eHM6ZWxlbWVudCBuYW1lPSJFbmVyZ3lzYXZpbmdsb2FkdGhyZXNob2xkdCIgdHlwZT0ieHM6dW5z
+aWduZWRJbnQiIC8+DQoNCiAgPHhzOmVsZW1lbnQgbmFtZT0iRW5lcmd5c2F2aW5ndGltZWR1cmF0
+aW9udCIgdHlwZT0ieHM6dW5zaWduZWRJbnQiIC8+DQoNCiAgPHhzOmVsZW1lbnQgbmFtZT0iUGh5
+c2NlbGxpZCIgdHlwZT0ieHM6dW5zaWduZWRJbnQiIC8+DQoNCiAgPHhzOmVsZW1lbnQgbmFtZT0i
+VXRjMjR0aW1lb2ZkYXl0IiB0eXBlPSJ4czpzdHJpbmciIC8+DQoNCiAgPHhzOnNpbXBsZVR5cGUg
+IG5hbWU9IkRheW9md2Vla3RUeXBlIj4NCiAgICA8eHM6cmVzdHJpY3Rpb24gYmFzZT0ieHM6c3Ry
+aW5nIj4NCiAgICAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51bSBNb25kYXlfMSIgLz4NCiAg
+ICAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51bSBUdWVzZGF5XzIiIC8+DQogICAgICA8eHM6
+ZW51bWVyYXRpb24gdmFsdWU9ImVudW0gV2VkbmVzZGF5XzMiIC8+DQogICAgICA8eHM6ZW51bWVy
+YXRpb24gdmFsdWU9ImVudW0gVGh1cnNkYXlfNCIgLz4NCiAgICAgIDx4czplbnVtZXJhdGlvbiB2
+YWx1ZT0iZW51bSBGcmlkYXlfNSIgLz4NCiAgICAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51
+bSBTYXR1cmRheV82IiAvPg0KICAgICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJlbnVtIFN1bmRh
+eV83IiAvPg0KICAgIDwveHM6cmVzdHJpY3Rpb24+DQogIDwveHM6c2ltcGxlVHlwZT4NCiAgPHhz
+OmVsZW1lbnQgbmFtZT0iRGF5b2Z3ZWVrdFR5cGUiIHR5cGU9InRuczpEYXlvZndlZWt0VHlwZSIg
+Lz4NCg0KICA8eHM6Y29tcGxleFR5cGUgbmFtZT0iTGlzdE9mRGF5b2Z3ZWVrdFR5cGUiPg0KICAg
+IDx4czpzZXF1ZW5jZT4NCiAgICAgIDx4czplbGVtZW50IG5hbWU9IkRheW9md2Vla3RUeXBlIiB0
+eXBlPSJ0bnM6RGF5b2Z3ZWVrdFR5cGUiIG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1bmJvdW5k
+ZWQiIC8+DQogICAgPC94czpzZXF1ZW5jZT4NCiAgPC94czpjb21wbGV4VHlwZT4NCiAgPHhzOmVs
+ZW1lbnQgbmFtZT0iTGlzdE9mRGF5b2Z3ZWVrdFR5cGUiIHR5cGU9InRuczpMaXN0T2ZEYXlvZndl
+ZWt0VHlwZSIgbmlsbGFibGU9InRydWUiPjwveHM6ZWxlbWVudD4NCg0KPC94czpzY2hlbWE+</ByteString>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15015" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=15013" DataType="String">
+    <DisplayName>NamespaceUri</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15013</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">urn:3gpp:sa5:_3gpp-5g-common-yang-types</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15016" BrowseName="Deprecated" ParentNodeId="ns=1;i=15013" DataType="Boolean">
+    <DisplayName>Deprecated</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15013</Reference>
+    </References>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">true</Boolean>
+    </Value>
+  </UAVariable>
+</UANodeSet>

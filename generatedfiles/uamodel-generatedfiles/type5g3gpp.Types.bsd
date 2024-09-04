@@ -1,0 +1,43 @@
+<opc:TypeDictionary
+  xmlns:types3gpp="http://opcfoundation.org/UA/default/"
+  xmlns:opc="http://opcfoundation.org/BinarySchema/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:tns="urn:3gpp:sa5:_3gpp-5g-common-yang-types"
+  DefaultByteOrder="LittleEndian"
+  TargetNamespace="urn:3gpp:sa5:_3gpp-5g-common-yang-types"
+>
+  <opc:Import Namespace="http://opcfoundation.org/UA/default/" Location="types3gpp.BinarySchema.bsd"/>
+
+  <opc:EnumeratedType Name="CommmodeltypeType" LengthInBits="32">
+    <opc:EnumeratedValue Name="enum DIRECT_COMMUNICATION_WO_NRF" Value="0" />
+    <opc:EnumeratedValue Name="enum DIRECT_COMMUNICATION_WITH_NRF" Value="1" />
+    <opc:EnumeratedValue Name="enum INDIRECT_COMMUNICATION_WO_DEDICATED_DISCOVERY" Value="2" />
+    <opc:EnumeratedValue Name="enum INDIRECT_COMMUNICATION_WITH_DEDICATED_DISCOVERY" Value="3" />
+  </opc:EnumeratedType>
+
+  <opc:OpaqueType Name="Energysavingloadthresholdt">
+  </opc:OpaqueType>
+
+  <opc:OpaqueType Name="Energysavingtimedurationt">
+  </opc:OpaqueType>
+
+  <opc:OpaqueType Name="Physcellid">
+  </opc:OpaqueType>
+
+  <opc:OpaqueType Name="Utc24timeofdayt">
+    <opc:Documentation>Time of day in HH:MM or H:MM 24-hour format per UTC
+time zone.</opc:Documentation>
+  </opc:OpaqueType>
+
+  <opc:EnumeratedType Name="DayofweektType" LengthInBits="32">
+    <opc:EnumeratedValue Name="enum Monday" Value="1" />
+    <opc:EnumeratedValue Name="enum Tuesday" Value="2" />
+    <opc:EnumeratedValue Name="enum Wednesday" Value="3" />
+    <opc:EnumeratedValue Name="enum Thursday" Value="4" />
+    <opc:EnumeratedValue Name="enum Friday" Value="5" />
+    <opc:EnumeratedValue Name="enum Saturday" Value="6" />
+    <opc:EnumeratedValue Name="enum Sunday" Value="7" />
+  </opc:EnumeratedType>
+
+</opc:TypeDictionary>

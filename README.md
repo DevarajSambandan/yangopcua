@@ -14,7 +14,10 @@ Generation of the OPC UA Information model from the YANG schema involves a two-s
 
 OPC UA Model Design to OPC UA NodeSet2 XML File generation
 
-![](images/yangopcua.002.png)
+$ pyang -f opc_ua inputfiles/simple-example.yang -o generatedfiles/simple-example-model.xml
+
+
+$ /app/Opc.Ua.ModelCompiler.exe -console -d2 generatedfiles/simple-example-model.xml -cg generatedfiles/uamodel-generatedfiles/simple-example-model.csv -o2 generatedfiles/uamodel-generatedfiles/
 
 
 **OPC UA – pyang plugin**

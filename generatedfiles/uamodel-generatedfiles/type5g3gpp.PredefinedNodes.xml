@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uax:ListOfNodeState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">
+  <uax:NamespaceUris>
+    <uax:NamespaceUri>urn:3gpp:sa5:_3gpp-5g-common-yang-types</uax:NamespaceUri>
+    <uax:NamespaceUri>http://opcfoundation.org/UA/default/</uax:NamespaceUri>
+  </uax:NamespaceUris>
+  <SnssaiType xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>ObjectType_8</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15020</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>SnssaiType</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=58</uax:Identifier>
+    </uax:SuperTypeId>
+    <Sd>
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15021</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>1</uax:NamespaceIndex>
+        <uax:Name>Sd</uax:Name>
+      </uax:BrowseName>
+      <uax:Description>
+        <uax:Locale></uax:Locale>
+        <uax:Text>Slice Differentiator
+If not needed, the value can be set to FFFFFF.</uax:Text>
+      </uax:Description>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15021</uax:NumericId>
+      <uax:DataType>
+        <uax:Identifier>i=12</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Sd>
+    <Sst>
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15022</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>1</uax:NamespaceIndex>
+        <uax:Name>Sst</uax:Name>
+      </uax:BrowseName>
+      <uax:Description>
+        <uax:Locale></uax:Locale>
+        <uax:Text>Slice/Service Type.
+Values 0 to 127 belong to standardized SST range and are defined in
+3GPP TS 23.501. Values 128 to 255 belong to operator-specific range.</uax:Text>
+      </uax:Description>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15022</uax:NumericId>
+      <uax:DataType>
+        <uax:Identifier>i=3</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Sst>
+  </SnssaiType>
+  <CommmodeltypeType xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>DataType_64</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15001</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>CommmodeltypeType</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=29</uax:Identifier>
+    </uax:SuperTypeId>
+    <uax:DataTypeDefinition>
+      <uax:TypeId>
+        <uax:Identifier>i=14799</uax:Identifier>
+      </uax:TypeId>
+      <uax:Body>
+        <uax:EnumDefinition>
+          <uax:Fields>
+            <uax:EnumField>
+              <uax:Value>0</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum DIRECT_COMMUNICATION_WO_NRF</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum DIRECT_COMMUNICATION_WO_NRF</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>1</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum DIRECT_COMMUNICATION_WITH_NRF</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum DIRECT_COMMUNICATION_WITH_NRF</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>2</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum INDIRECT_COMMUNICATION_WO_DEDICATED_DISCOVERY</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum INDIRECT_COMMUNICATION_WO_DEDICATED_DISCOVERY</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>3</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum INDIRECT_COMMUNICATION_WITH_DEDICATED_DISCOVERY</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum INDIRECT_COMMUNICATION_WITH_DEDICATED_DISCOVERY</uax:Name>
+            </uax:EnumField>
+          </uax:Fields>
+        </uax:EnumDefinition>
+      </uax:Body>
+    </uax:DataTypeDefinition>
+    <EnumStrings xmlns="http://opcfoundation.org/UA/">
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15002</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>0</uax:NamespaceIndex>
+        <uax:Name>EnumStrings</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15002</uax:NumericId>
+      <uax:Value>
+        <uax:Value>
+          <uax:ListOfLocalizedText>
+            <uax:LocalizedText>
+              <uax:Locale></uax:Locale>
+              <uax:Text>enum DIRECT_COMMUNICATION_WO_NRF</uax:Text>
+            </uax:LocalizedText>
+            <uax:LocalizedText>
+              <uax:Locale></uax:Locale>
+              <uax:Text>enum DIRECT_COMMUNICATION_WITH_NRF</uax:Text>
+            </uax:LocalizedText>
+            <uax:LocalizedText>
+              <uax:Locale></uax:Locale>
+              <uax:Text>enum INDIRECT_COMMUNICATION_WO_DEDICATED_DISCOVERY</uax:Text>
+            </uax:LocalizedText>
+            <uax:LocalizedText>
+              <uax:Locale></uax:Locale>
+              <uax:Text>enum INDIRECT_COMMUNICATION_WITH_DEDICATED_DISCOVERY</uax:Text>
+            </uax:LocalizedText>
+          </uax:ListOfLocalizedText>
+        </uax:Value>
+      </uax:Value>
+      <uax:DataType>
+        <uax:Identifier>i=21</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>1</uax:ValueRank>
+      <uax:ArrayDimensions>0</uax:ArrayDimensions>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </EnumStrings>
+  </CommmodeltypeType>
+  <SupportedfuncType xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>ObjectType_8</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15017</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>SupportedfuncType</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=58</uax:Identifier>
+    </uax:SuperTypeId>
+    <Function>
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15018</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>1</uax:NamespaceIndex>
+        <uax:Name>Function</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15018</uax:NumericId>
+      <uax:DataType>
+        <uax:Identifier>i=12</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Function>
+    <Policy>
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15019</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>1</uax:NamespaceIndex>
+        <uax:Name>Policy</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15019</uax:NumericId>
+      <uax:DataType>
+        <uax:Identifier>i=12</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Policy>
+  </SupportedfuncType>
+  <CommmodelType xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>ObjectType_8</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15023</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>CommmodelType</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=58</uax:Identifier>
+    </uax:SuperTypeId>
+    <Groupid>
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15024</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>1</uax:NamespaceIndex>
+        <uax:Name>Groupid</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15024</uax:NumericId>
+      <uax:DataType>
+        <uax:Identifier>i=5</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Groupid>
+    <Commmodeltype>
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15025</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>1</uax:NamespaceIndex>
+        <uax:Name>Commmodeltype</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15025</uax:NumericId>
+      <uax:DataType>
+        <uax:Identifier>ns=1;i=15001</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Commmodeltype>
+    <Targetnfservicelist>
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15026</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>1</uax:NamespaceIndex>
+        <uax:Name>Targetnfservicelist</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15026</uax:NumericId>
+      <uax:DataType>
+        <uax:Identifier>ns=1;i=15001</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Targetnfservicelist>
+    <Commmodelconfiguration>
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15027</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>1</uax:NamespaceIndex>
+        <uax:Name>Commmodelconfiguration</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15027</uax:NumericId>
+      <uax:DataType>
+        <uax:Identifier>i=12</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Commmodelconfiguration>
+  </CommmodelType>
+  <Energysavingloadthresholdt xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>DataType_64</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15003</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>Energysavingloadthresholdt</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=7</uax:Identifier>
+    </uax:SuperTypeId>
+  </Energysavingloadthresholdt>
+  <Energysavingtimedurationt xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>DataType_64</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15004</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>Energysavingtimedurationt</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=7</uax:Identifier>
+    </uax:SuperTypeId>
+  </Energysavingtimedurationt>
+  <Physcellid xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>DataType_64</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15005</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>Physcellid</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=7</uax:Identifier>
+    </uax:SuperTypeId>
+  </Physcellid>
+  <Utc24timeofdayt xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>DataType_64</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15006</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>Utc24timeofdayt</uax:Name>
+    </uax:BrowseName>
+    <uax:Description>
+      <uax:Locale></uax:Locale>
+      <uax:Text>Time of day in HH:MM or H:MM 24-hour format per UTC
+time zone.</uax:Text>
+    </uax:Description>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=12</uax:Identifier>
+    </uax:SuperTypeId>
+  </Utc24timeofdayt>
+  <DayofweektType xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>DataType_64</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15007</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>DayofweektType</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=29</uax:Identifier>
+    </uax:SuperTypeId>
+    <uax:DataTypeDefinition>
+      <uax:TypeId>
+        <uax:Identifier>i=14799</uax:Identifier>
+      </uax:TypeId>
+      <uax:Body>
+        <uax:EnumDefinition>
+          <uax:Fields>
+            <uax:EnumField>
+              <uax:Value>1</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum Monday</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum Monday</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>2</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum Tuesday</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum Tuesday</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>3</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum Wednesday</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum Wednesday</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>4</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum Thursday</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum Thursday</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>5</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum Friday</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum Friday</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>6</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum Saturday</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum Saturday</uax:Name>
+            </uax:EnumField>
+            <uax:EnumField>
+              <uax:Value>7</uax:Value>
+              <uax:DisplayName>
+                <uax:Text>enum Sunday</uax:Text>
+              </uax:DisplayName>
+              <uax:Name>enum Sunday</uax:Name>
+            </uax:EnumField>
+          </uax:Fields>
+        </uax:EnumDefinition>
+      </uax:Body>
+    </uax:DataTypeDefinition>
+    <EnumValues xmlns="http://opcfoundation.org/UA/">
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15008</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>0</uax:NamespaceIndex>
+        <uax:Name>EnumValues</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:ModellingRuleId>
+        <uax:Identifier>i=78</uax:Identifier>
+      </uax:ModellingRuleId>
+      <uax:NumericId>15008</uax:NumericId>
+      <uax:Value>
+        <uax:Value>
+          <uax:ListOfExtensionObject>
+            <uax:ExtensionObject>
+              <uax:TypeId>
+                <uax:Identifier>i=7616</uax:Identifier>
+              </uax:TypeId>
+              <uax:Body>
+                <uax:EnumValueType>
+                  <uax:Value>1</uax:Value>
+                  <uax:DisplayName>
+                    <uax:Locale></uax:Locale>
+                    <uax:Text>enum Monday</uax:Text>
+                  </uax:DisplayName>
+                </uax:EnumValueType>
+              </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+              <uax:TypeId>
+                <uax:Identifier>i=7616</uax:Identifier>
+              </uax:TypeId>
+              <uax:Body>
+                <uax:EnumValueType>
+                  <uax:Value>2</uax:Value>
+                  <uax:DisplayName>
+                    <uax:Locale></uax:Locale>
+                    <uax:Text>enum Tuesday</uax:Text>
+                  </uax:DisplayName>
+                </uax:EnumValueType>
+              </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+              <uax:TypeId>
+                <uax:Identifier>i=7616</uax:Identifier>
+              </uax:TypeId>
+              <uax:Body>
+                <uax:EnumValueType>
+                  <uax:Value>3</uax:Value>
+                  <uax:DisplayName>
+                    <uax:Locale></uax:Locale>
+                    <uax:Text>enum Wednesday</uax:Text>
+                  </uax:DisplayName>
+                </uax:EnumValueType>
+              </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+              <uax:TypeId>
+                <uax:Identifier>i=7616</uax:Identifier>
+              </uax:TypeId>
+              <uax:Body>
+                <uax:EnumValueType>
+                  <uax:Value>4</uax:Value>
+                  <uax:DisplayName>
+                    <uax:Locale></uax:Locale>
+                    <uax:Text>enum Thursday</uax:Text>
+                  </uax:DisplayName>
+                </uax:EnumValueType>
+              </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+              <uax:TypeId>
+                <uax:Identifier>i=7616</uax:Identifier>
+              </uax:TypeId>
+              <uax:Body>
+                <uax:EnumValueType>
+                  <uax:Value>5</uax:Value>
+                  <uax:DisplayName>
+                    <uax:Locale></uax:Locale>
+                    <uax:Text>enum Friday</uax:Text>
+                  </uax:DisplayName>
+                </uax:EnumValueType>
+              </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+              <uax:TypeId>
+                <uax:Identifier>i=7616</uax:Identifier>
+              </uax:TypeId>
+              <uax:Body>
+                <uax:EnumValueType>
+                  <uax:Value>6</uax:Value>
+                  <uax:DisplayName>
+                    <uax:Locale></uax:Locale>
+                    <uax:Text>enum Saturday</uax:Text>
+                  </uax:DisplayName>
+                </uax:EnumValueType>
+              </uax:Body>
+            </uax:ExtensionObject>
+            <uax:ExtensionObject>
+              <uax:TypeId>
+                <uax:Identifier>i=7616</uax:Identifier>
+              </uax:TypeId>
+              <uax:Body>
+                <uax:EnumValueType>
+                  <uax:Value>7</uax:Value>
+                  <uax:DisplayName>
+                    <uax:Locale></uax:Locale>
+                    <uax:Text>enum Sunday</uax:Text>
+                  </uax:DisplayName>
+                </uax:EnumValueType>
+              </uax:Body>
+            </uax:ExtensionObject>
+          </uax:ListOfExtensionObject>
+        </uax:Value>
+      </uax:Value>
+      <uax:DataType>
+        <uax:Identifier>i=7594</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>1</uax:ValueRank>
+      <uax:ArrayDimensions>0</uax:ArrayDimensions>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </EnumValues>
+  </DayofweektType>
+  <_3gpp-5g-common-yang-types_BinarySchema xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>Variable_2</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15009</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>type5g3gpp</uax:Name>
+    </uax:BrowseName>
+    <uax:TypeDefinitionId>
+      <uax:Identifier>i=72</uax:Identifier>
+    </uax:TypeDefinitionId>
+    <uax:NumericId>15009</uax:NumericId>
+    <uax:Value>
+      <uax:Value>
+        <uax:ByteString>PG9wYzpUeXBlRGljdGlvbmFyeQ0KICB4bWxuczp0eXBlczNncHA9Imh0dHA6Ly9vcGNmb3VuZGF0
+aW9uLm9yZy9VQS9kZWZhdWx0LyINCiAgeG1sbnM6b3BjPSJodHRwOi8vb3BjZm91bmRhdGlvbi5v
+cmcvQmluYXJ5U2NoZW1hLyINCiAgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hN
+TFNjaGVtYS1pbnN0YW5jZSINCiAgeG1sbnM6dWE9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9V
+QS8iDQogIHhtbG5zOnRucz0idXJuOjNncHA6c2E1Ol8zZ3BwLTVnLWNvbW1vbi15YW5nLXR5cGVz
+Ig0KICBEZWZhdWx0Qnl0ZU9yZGVyPSJMaXR0bGVFbmRpYW4iDQogIFRhcmdldE5hbWVzcGFjZT0i
+dXJuOjNncHA6c2E1Ol8zZ3BwLTVnLWNvbW1vbi15YW5nLXR5cGVzIg0KPg0KICA8b3BjOkltcG9y
+dCBOYW1lc3BhY2U9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9VQS9kZWZhdWx0LyIgTG9jYXRp
+b249InR5cGVzM2dwcC5CaW5hcnlTY2hlbWEuYnNkIi8+DQoNCiAgPG9wYzpFbnVtZXJhdGVkVHlw
+ZSBOYW1lPSJDb21tbW9kZWx0eXBlVHlwZSIgTGVuZ3RoSW5CaXRzPSIzMiI+DQogICAgPG9wYzpF
+bnVtZXJhdGVkVmFsdWUgTmFtZT0iZW51bSBESVJFQ1RfQ09NTVVOSUNBVElPTl9XT19OUkYiIFZh
+bHVlPSIwIiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9ImVudW0gRElSRUNUX0NP
+TU1VTklDQVRJT05fV0lUSF9OUkYiIFZhbHVlPSIxIiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZh
+bHVlIE5hbWU9ImVudW0gSU5ESVJFQ1RfQ09NTVVOSUNBVElPTl9XT19ERURJQ0FURURfRElTQ09W
+RVJZIiBWYWx1ZT0iMiIgLz4NCiAgICA8b3BjOkVudW1lcmF0ZWRWYWx1ZSBOYW1lPSJlbnVtIElO
+RElSRUNUX0NPTU1VTklDQVRJT05fV0lUSF9ERURJQ0FURURfRElTQ09WRVJZIiBWYWx1ZT0iMyIg
+Lz4NCiAgPC9vcGM6RW51bWVyYXRlZFR5cGU+DQoNCiAgPG9wYzpPcGFxdWVUeXBlIE5hbWU9IkVu
+ZXJneXNhdmluZ2xvYWR0aHJlc2hvbGR0Ij4NCiAgPC9vcGM6T3BhcXVlVHlwZT4NCg0KICA8b3Bj
+Ok9wYXF1ZVR5cGUgTmFtZT0iRW5lcmd5c2F2aW5ndGltZWR1cmF0aW9udCI+DQogIDwvb3BjOk9w
+YXF1ZVR5cGU+DQoNCiAgPG9wYzpPcGFxdWVUeXBlIE5hbWU9IlBoeXNjZWxsaWQiPg0KICA8L29w
+YzpPcGFxdWVUeXBlPg0KDQogIDxvcGM6T3BhcXVlVHlwZSBOYW1lPSJVdGMyNHRpbWVvZmRheXQi
+Pg0KICAgIDxvcGM6RG9jdW1lbnRhdGlvbj5UaW1lIG9mIGRheSBpbiBISDpNTSBvciBIOk1NIDI0
+LWhvdXIgZm9ybWF0IHBlciBVVEMKdGltZSB6b25lLjwvb3BjOkRvY3VtZW50YXRpb24+DQogIDwv
+b3BjOk9wYXF1ZVR5cGU+DQoNCiAgPG9wYzpFbnVtZXJhdGVkVHlwZSBOYW1lPSJEYXlvZndlZWt0
+VHlwZSIgTGVuZ3RoSW5CaXRzPSIzMiI+DQogICAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFtZT0i
+ZW51bSBNb25kYXkiIFZhbHVlPSIxIiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZhbHVlIE5hbWU9
+ImVudW0gVHVlc2RheSIgVmFsdWU9IjIiIC8+DQogICAgPG9wYzpFbnVtZXJhdGVkVmFsdWUgTmFt
+ZT0iZW51bSBXZWRuZXNkYXkiIFZhbHVlPSIzIiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZhbHVl
+IE5hbWU9ImVudW0gVGh1cnNkYXkiIFZhbHVlPSI0IiAvPg0KICAgIDxvcGM6RW51bWVyYXRlZFZh
+bHVlIE5hbWU9ImVudW0gRnJpZGF5IiBWYWx1ZT0iNSIgLz4NCiAgICA8b3BjOkVudW1lcmF0ZWRW
+YWx1ZSBOYW1lPSJlbnVtIFNhdHVyZGF5IiBWYWx1ZT0iNiIgLz4NCiAgICA8b3BjOkVudW1lcmF0
+ZWRWYWx1ZSBOYW1lPSJlbnVtIFN1bmRheSIgVmFsdWU9IjciIC8+DQogIDwvb3BjOkVudW1lcmF0
+ZWRUeXBlPg0KDQo8L29wYzpUeXBlRGljdGlvbmFyeT4=</uax:ByteString>
+      </uax:Value>
+    </uax:Value>
+    <uax:DataType>
+      <uax:Identifier>i=15</uax:Identifier>
+    </uax:DataType>
+    <uax:ValueRank>-1</uax:ValueRank>
+    <uax:AccessLevel>1</uax:AccessLevel>
+    <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    <uax:References>
+      <uax:Reference>
+        <uax:ReferenceTypeId>
+          <uax:Identifier>i=47</uax:Identifier>
+        </uax:ReferenceTypeId>
+        <uax:IsInverse>true</uax:IsInverse>
+        <uax:TargetId>
+          <uax:Identifier>i=93</uax:Identifier>
+        </uax:TargetId>
+      </uax:Reference>
+    </uax:References>
+    <NamespaceUri xmlns="http://opcfoundation.org/UA/">
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15011</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>0</uax:NamespaceIndex>
+        <uax:Name>NamespaceUri</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:NumericId>15011</uax:NumericId>
+      <uax:Value>
+        <uax:Value>
+          <uax:String>urn:3gpp:sa5:_3gpp-5g-common-yang-types</uax:String>
+        </uax:Value>
+      </uax:Value>
+      <uax:DataType>
+        <uax:Identifier>i=12</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </NamespaceUri>
+    <Deprecated xmlns="http://opcfoundation.org/UA/">
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15012</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>0</uax:NamespaceIndex>
+        <uax:Name>Deprecated</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:NumericId>15012</uax:NumericId>
+      <uax:Value>
+        <uax:Value>
+          <uax:Boolean>true</uax:Boolean>
+        </uax:Value>
+      </uax:Value>
+      <uax:DataType>
+        <uax:Identifier>i=1</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Deprecated>
+  </_3gpp-5g-common-yang-types_BinarySchema>
+  <_3gpp-5g-common-yang-types_XmlSchema xmlns="urn:3gpp:sa5:_3gpp-5g-common-yang-types">
+    <uax:NodeClass>Variable_2</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15013</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>type5g3gpp</uax:Name>
+    </uax:BrowseName>
+    <uax:TypeDefinitionId>
+      <uax:Identifier>i=72</uax:Identifier>
+    </uax:TypeDefinitionId>
+    <uax:NumericId>15013</uax:NumericId>
+    <uax:Value>
+      <uax:Value>
+        <uax:ByteString>PHhzOnNjaGVtYQ0KICB4bWxuczp0eXBlczNncHA9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9yZy9V
+QS9kZWZhdWx0LyINCiAgeG1sbnM6eHM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1h
+Ig0KICB4bWxuczp1YT0iaHR0cDovL29wY2ZvdW5kYXRpb24ub3JnL1VBLzIwMDgvMDIvVHlwZXMu
+eHNkIg0KICB4bWxuczp0bnM9InVybjozZ3BwOnNhNTpfM2dwcC01Zy1jb21tb24teWFuZy10eXBl
+cyINCiAgdGFyZ2V0TmFtZXNwYWNlPSJ1cm46M2dwcDpzYTU6XzNncHAtNWctY29tbW9uLXlhbmct
+dHlwZXMiDQogIGVsZW1lbnRGb3JtRGVmYXVsdD0icXVhbGlmaWVkIg0KPg0KICA8eHM6aW1wb3J0
+IG5hbWVzcGFjZT0iaHR0cDovL29wY2ZvdW5kYXRpb24ub3JnL1VBL2RlZmF1bHQvIiAvPg0KDQog
+IDx4czpzaW1wbGVUeXBlICBuYW1lPSJDb21tbW9kZWx0eXBlVHlwZSI+DQogICAgPHhzOnJlc3Ry
+aWN0aW9uIGJhc2U9InhzOnN0cmluZyI+DQogICAgICA8eHM6ZW51bWVyYXRpb24gdmFsdWU9ImVu
+dW0gRElSRUNUX0NPTU1VTklDQVRJT05fV09fTlJGXzAiIC8+DQogICAgICA8eHM6ZW51bWVyYXRp
+b24gdmFsdWU9ImVudW0gRElSRUNUX0NPTU1VTklDQVRJT05fV0lUSF9OUkZfMSIgLz4NCiAgICAg
+IDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51bSBJTkRJUkVDVF9DT01NVU5JQ0FUSU9OX1dPX0RF
+RElDQVRFRF9ESVNDT1ZFUllfMiIgLz4NCiAgICAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51
+bSBJTkRJUkVDVF9DT01NVU5JQ0FUSU9OX1dJVEhfREVESUNBVEVEX0RJU0NPVkVSWV8zIiAvPg0K
+ICAgIDwveHM6cmVzdHJpY3Rpb24+DQogIDwveHM6c2ltcGxlVHlwZT4NCiAgPHhzOmVsZW1lbnQg
+bmFtZT0iQ29tbW1vZGVsdHlwZVR5cGUiIHR5cGU9InRuczpDb21tbW9kZWx0eXBlVHlwZSIgLz4N
+Cg0KICA8eHM6Y29tcGxleFR5cGUgbmFtZT0iTGlzdE9mQ29tbW1vZGVsdHlwZVR5cGUiPg0KICAg
+IDx4czpzZXF1ZW5jZT4NCiAgICAgIDx4czplbGVtZW50IG5hbWU9IkNvbW1tb2RlbHR5cGVUeXBl
+IiB0eXBlPSJ0bnM6Q29tbW1vZGVsdHlwZVR5cGUiIG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1
+bmJvdW5kZWQiIC8+DQogICAgPC94czpzZXF1ZW5jZT4NCiAgPC94czpjb21wbGV4VHlwZT4NCiAg
+PHhzOmVsZW1lbnQgbmFtZT0iTGlzdE9mQ29tbW1vZGVsdHlwZVR5cGUiIHR5cGU9InRuczpMaXN0
+T2ZDb21tbW9kZWx0eXBlVHlwZSIgbmlsbGFibGU9InRydWUiPjwveHM6ZWxlbWVudD4NCg0KICA8
+eHM6ZWxlbWVudCBuYW1lPSJFbmVyZ3lzYXZpbmdsb2FkdGhyZXNob2xkdCIgdHlwZT0ieHM6dW5z
+aWduZWRJbnQiIC8+DQoNCiAgPHhzOmVsZW1lbnQgbmFtZT0iRW5lcmd5c2F2aW5ndGltZWR1cmF0
+aW9udCIgdHlwZT0ieHM6dW5zaWduZWRJbnQiIC8+DQoNCiAgPHhzOmVsZW1lbnQgbmFtZT0iUGh5
+c2NlbGxpZCIgdHlwZT0ieHM6dW5zaWduZWRJbnQiIC8+DQoNCiAgPHhzOmVsZW1lbnQgbmFtZT0i
+VXRjMjR0aW1lb2ZkYXl0IiB0eXBlPSJ4czpzdHJpbmciIC8+DQoNCiAgPHhzOnNpbXBsZVR5cGUg
+IG5hbWU9IkRheW9md2Vla3RUeXBlIj4NCiAgICA8eHM6cmVzdHJpY3Rpb24gYmFzZT0ieHM6c3Ry
+aW5nIj4NCiAgICAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51bSBNb25kYXlfMSIgLz4NCiAg
+ICAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51bSBUdWVzZGF5XzIiIC8+DQogICAgICA8eHM6
+ZW51bWVyYXRpb24gdmFsdWU9ImVudW0gV2VkbmVzZGF5XzMiIC8+DQogICAgICA8eHM6ZW51bWVy
+YXRpb24gdmFsdWU9ImVudW0gVGh1cnNkYXlfNCIgLz4NCiAgICAgIDx4czplbnVtZXJhdGlvbiB2
+YWx1ZT0iZW51bSBGcmlkYXlfNSIgLz4NCiAgICAgIDx4czplbnVtZXJhdGlvbiB2YWx1ZT0iZW51
+bSBTYXR1cmRheV82IiAvPg0KICAgICAgPHhzOmVudW1lcmF0aW9uIHZhbHVlPSJlbnVtIFN1bmRh
+eV83IiAvPg0KICAgIDwveHM6cmVzdHJpY3Rpb24+DQogIDwveHM6c2ltcGxlVHlwZT4NCiAgPHhz
+OmVsZW1lbnQgbmFtZT0iRGF5b2Z3ZWVrdFR5cGUiIHR5cGU9InRuczpEYXlvZndlZWt0VHlwZSIg
+Lz4NCg0KICA8eHM6Y29tcGxleFR5cGUgbmFtZT0iTGlzdE9mRGF5b2Z3ZWVrdFR5cGUiPg0KICAg
+IDx4czpzZXF1ZW5jZT4NCiAgICAgIDx4czplbGVtZW50IG5hbWU9IkRheW9md2Vla3RUeXBlIiB0
+eXBlPSJ0bnM6RGF5b2Z3ZWVrdFR5cGUiIG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1bmJvdW5k
+ZWQiIC8+DQogICAgPC94czpzZXF1ZW5jZT4NCiAgPC94czpjb21wbGV4VHlwZT4NCiAgPHhzOmVs
+ZW1lbnQgbmFtZT0iTGlzdE9mRGF5b2Z3ZWVrdFR5cGUiIHR5cGU9InRuczpMaXN0T2ZEYXlvZndl
+ZWt0VHlwZSIgbmlsbGFibGU9InRydWUiPjwveHM6ZWxlbWVudD4NCg0KPC94czpzY2hlbWE+</uax:ByteString>
+      </uax:Value>
+    </uax:Value>
+    <uax:DataType>
+      <uax:Identifier>i=15</uax:Identifier>
+    </uax:DataType>
+    <uax:ValueRank>-1</uax:ValueRank>
+    <uax:AccessLevel>1</uax:AccessLevel>
+    <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    <uax:References>
+      <uax:Reference>
+        <uax:ReferenceTypeId>
+          <uax:Identifier>i=47</uax:Identifier>
+        </uax:ReferenceTypeId>
+        <uax:IsInverse>true</uax:IsInverse>
+        <uax:TargetId>
+          <uax:Identifier>i=92</uax:Identifier>
+        </uax:TargetId>
+      </uax:Reference>
+    </uax:References>
+    <NamespaceUri xmlns="http://opcfoundation.org/UA/">
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15015</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>0</uax:NamespaceIndex>
+        <uax:Name>NamespaceUri</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:NumericId>15015</uax:NumericId>
+      <uax:Value>
+        <uax:Value>
+          <uax:String>urn:3gpp:sa5:_3gpp-5g-common-yang-types</uax:String>
+        </uax:Value>
+      </uax:Value>
+      <uax:DataType>
+        <uax:Identifier>i=12</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </NamespaceUri>
+    <Deprecated xmlns="http://opcfoundation.org/UA/">
+      <uax:NodeClass>Variable_2</uax:NodeClass>
+      <uax:NodeId>
+        <uax:Identifier>ns=1;i=15016</uax:Identifier>
+      </uax:NodeId>
+      <uax:BrowseName>
+        <uax:NamespaceIndex>0</uax:NamespaceIndex>
+        <uax:Name>Deprecated</uax:Name>
+      </uax:BrowseName>
+      <uax:ReferenceTypeId>
+        <uax:Identifier>i=46</uax:Identifier>
+      </uax:ReferenceTypeId>
+      <uax:TypeDefinitionId>
+        <uax:Identifier>i=68</uax:Identifier>
+      </uax:TypeDefinitionId>
+      <uax:NumericId>15016</uax:NumericId>
+      <uax:Value>
+        <uax:Value>
+          <uax:Boolean>true</uax:Boolean>
+        </uax:Value>
+      </uax:Value>
+      <uax:DataType>
+        <uax:Identifier>i=1</uax:Identifier>
+      </uax:DataType>
+      <uax:ValueRank>-1</uax:ValueRank>
+      <uax:AccessLevel>1</uax:AccessLevel>
+      <uax:UserAccessLevel>1</uax:UserAccessLevel>
+    </Deprecated>
+  </_3gpp-5g-common-yang-types_XmlSchema>
+</uax:ListOfNodeState>
