@@ -44,5 +44,5 @@ Copy the opc ua plugin(https://github.com/DevarajSambandan/yangopcua/blob/main/p
   
 YANG to OPC UA Model Design File Generation
 
- $ pyang -f <input yang file> -o <output opc ua model design xml file>
+ $ pyang -f "<input yang file>" -o output "<opc ua model design xml file>"
 
