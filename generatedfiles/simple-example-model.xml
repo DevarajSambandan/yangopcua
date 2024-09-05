@@ -5,21 +5,23 @@
     xmlns:ua="http://opcfoundation.org/UA/"
     xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns="http://example.com/example-2"
-    TargetNamespace="http://example.com/example-2"
+    xmlns="http://example.com/simple-example/"
+    TargetNamespace="http://example.com/simple-example/"
     TargetVersion="1.0">
+
     <opc:Namespaces>
-        <opc:Namespace Name="example-2" Prefix="ex2" XmlPrefix="ex2">http://example.com/example-2</opc:Namespace>
+        <opc:Namespace Name="simple-example" Prefix="simex" XmlPrefix="simex">http://example.com/simple-example/</opc:Namespace>
     </opc:Namespaces>
+
     <opc:ObjectType SymbolicName="BagType" BaseType="ua:BaseObjectType">
       <opc:Children>
           <opc:ObjectType SymbolicName="FooEntryType" BaseType="ua:BaseObjectType">
             <opc:Children>
-                <opc:Property SymbolicName="Number" DataType="UInt64" AccessLevel="Read"> 
+                <opc:Property SymbolicName="Number" DataType="ua:UInt64" AccessLevel="Read"> 
                 </opc:Property>
-                <opc:Property SymbolicName="Prime" DataType="Boolean" AccessLevel="Read"> 
+                <opc:Property SymbolicName="Prime" DataType="ua:Boolean" AccessLevel="Read"> 
                 </opc:Property>
-                <opc:Property SymbolicName="InWords" DataType="String" AccessLevel="Read"> 
+                <opc:Property SymbolicName="InWords" DataType="ua:String" AccessLevel="Read"> 
                 </opc:Property>
             </opc:Children>
           </opc:ObjectType>
@@ -30,6 +32,7 @@
           </opc:ObjectType>
       </opc:Children>
     </opc:ObjectType>
+
     <opc:Object SymbolicName="Bag" TypeDefinition="BagType">
       <opc:Children>
         <opc:References>
@@ -41,22 +44,24 @@
     </opc:Object>
     <opc:ObjectType SymbolicName="MyGroupingType" BaseType="ua:BaseObjectType">
       <opc:Children>
-        <opc:Property SymbolicName="Name" DataType="String" AccessLevel="Read"> 
+        <opc:Property SymbolicName="Name" DataType="ua:String" AccessLevel="Read"> 
           <opc:DefaultValue> <uax:String>group-1</uax:String> </opc:DefaultValue>
           <opc:Description>This is group name</opc:Description>
         </opc:Property>
-        <opc:Property SymbolicName="Value" DataType="Int32" AccessLevel="Read"> 
+        <opc:Property SymbolicName="Value" DataType="ua:Int32" AccessLevel="Read"> 
           <opc:DefaultValue> <uax:Int32>10</uax:Int32> </opc:DefaultValue>
           <opc:Description>Number of person in a group</opc:Description>
         </opc:Property>
       </opc:Children>
     </opc:ObjectType>
+
     <opc:ObjectType SymbolicName="ExampleContainerType" BaseType="ua:BaseObjectType">
       <opc:Children>
           <opc:Object SymbolicName="MyGrouping" TypeDefinition="MyGroupingType">
           </opc:Object>
       </opc:Children>
     </opc:ObjectType>
+
     <opc:Object SymbolicName="ExampleContainer" TypeDefinition="ExampleContainerType">
       <opc:Children>
         <opc:References>
@@ -66,25 +71,27 @@
         </opc:References>
       </opc:Children>
     </opc:Object>
-    <opc:DataType SymbolicName="Ipv4Address" BaseType="String"> 
+    <opc:DataType SymbolicName="Ipv4Address" BaseType="ua:String"> 
       <opc:DefaultValue> <uax:String>127.0.0.0</uax:String> </opc:DefaultValue>
       <opc:Description>IPv4 address</opc:Description>
     </opc:DataType>
-    <opc:Variable SymbolicName="ListOfPorts" DataType="String" AccessLevel="Read"> 
+    <opc:Variable SymbolicName="ListOfPorts" DataType="ua:String" AccessLevel="Read"> 
       <opc:Description>List of ports the server to use</opc:Description>
-    </opc:Variable>    
-	<opc:Method SymbolicName="UpdateSoftware" ModellingRule="Mandatory">
+    </opc:Variable>
+
+    <opc:Method SymbolicName="UpdateSoftware" ModellingRule="Mandatory">
       <opc:InputArguments>
-          <opc:Argument SymbolicName="SoftwareInputPath" DataType="String" AccessLevel="Read"> 
+          <opc:Argument Name="SoftwareInputPath" DataType="ua:String" AccessLevel="Read"> 
             <opc:DefaultValue> <uax:String>/home/ubuntu/software</uax:String> </opc:DefaultValue>
             <opc:Description>Software input path</opc:Description>
           </opc:Argument>
       </opc:InputArguments>
       <opc:OutputArguments>
-          <opc:Argument SymbolicName="SoftwareOutputPath" DataType="String" AccessLevel="Read"> 
+          <opc:Argument Name="SoftwareOutputPath" DataType="ua:String" AccessLevel="Read"> 
             <opc:DefaultValue> <uax:String>/home/ubuntu/output/software</uax:String> </opc:DefaultValue>
             <opc:Description>Software output path</opc:Description>
           </opc:Argument>
       </opc:OutputArguments>
     </opc:Method>
+
 </opc:ModelDesign>

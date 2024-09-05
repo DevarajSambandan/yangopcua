@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
+  <NamespaceUris>
+    <Uri>http://example.com/simple-example/</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="http://example.com/simple-example/" Version="1.0">
+      <RequiredModel ModelUri="http://opcfoundation.org/UA/" Version="1.04.7" PublicationDate="2020-04-14T00:00:00Z" />
+    </Model>
+  </Models>
+  <Aliases>
+    <Alias Alias="Boolean">i=1</Alias>
+    <Alias Alias="SByte">i=2</Alias>
+    <Alias Alias="Byte">i=3</Alias>
+    <Alias Alias="Int16">i=4</Alias>
+    <Alias Alias="UInt16">i=5</Alias>
+    <Alias Alias="Int32">i=6</Alias>
+    <Alias Alias="UInt32">i=7</Alias>
+    <Alias Alias="Int64">i=8</Alias>
+    <Alias Alias="UInt64">i=9</Alias>
+    <Alias Alias="Float">i=10</Alias>
+    <Alias Alias="Double">i=11</Alias>
+    <Alias Alias="DateTime">i=13</Alias>
+    <Alias Alias="String">i=12</Alias>
+    <Alias Alias="ByteString">i=15</Alias>
+    <Alias Alias="Guid">i=14</Alias>
+    <Alias Alias="XmlElement">i=16</Alias>
+    <Alias Alias="NodeId">i=17</Alias>
+    <Alias Alias="ExpandedNodeId">i=18</Alias>
+    <Alias Alias="QualifiedName">i=20</Alias>
+    <Alias Alias="LocalizedText">i=21</Alias>
+    <Alias Alias="StatusCode">i=19</Alias>
+    <Alias Alias="Structure">i=22</Alias>
+    <Alias Alias="Number">i=26</Alias>
+    <Alias Alias="Integer">i=27</Alias>
+    <Alias Alias="UInteger">i=28</Alias>
+    <Alias Alias="HasComponent">i=47</Alias>
+    <Alias Alias="HasProperty">i=46</Alias>
+    <Alias Alias="Organizes">i=35</Alias>
+    <Alias Alias="HasEventSource">i=36</Alias>
+    <Alias Alias="HasNotifier">i=48</Alias>
+    <Alias Alias="HasSubtype">i=45</Alias>
+    <Alias Alias="HasTypeDefinition">i=40</Alias>
+    <Alias Alias="HasModellingRule">i=37</Alias>
+    <Alias Alias="HasEncoding">i=38</Alias>
+    <Alias Alias="HasDescription">i=39</Alias>
+  </Aliases>
+  <UAObjectType NodeId="ns=1;i=15001" BrowseName="1:BagType">
+    <DisplayName>BagType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+    </References>
+  </UAObjectType>
+  <UAObject NodeId="ns=1;i=15002" BrowseName="1:Bag">
+    <DisplayName>Bag</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=15001</Reference>
+    </References>
+  </UAObject>
+  <UAObjectType NodeId="ns=1;i=15003" BrowseName="1:MyGroupingType">
+    <DisplayName>MyGroupingType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15004</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15005</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+    </References>
+  </UAObjectType>
+  <UAVariable NodeId="ns=1;i=15004" BrowseName="1:Name" ParentNodeId="ns=1;i=15003" DataType="String">
+    <DisplayName>Name</DisplayName>
+    <Description>This is group name</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15003</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">group-1</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15005" BrowseName="1:Value" ParentNodeId="ns=1;i=15003" DataType="Int32">
+    <DisplayName>Value</DisplayName>
+    <Description>Number of person in a group</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15003</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">10</Int32>
+    </Value>
+  </UAVariable>
+  <UAObjectType NodeId="ns=1;i=15006" BrowseName="1:ExampleContainerType">
+    <DisplayName>ExampleContainerType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=15007</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+    </References>
+  </UAObjectType>
+  <UAObject NodeId="ns=1;i=15007" BrowseName="1:MyGrouping" ParentNodeId="ns=1;i=15006">
+    <DisplayName>MyGrouping</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15008</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15009</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=15003</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15006</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=15008" BrowseName="1:Name" ParentNodeId="ns=1;i=15007" DataType="String">
+    <DisplayName>Name</DisplayName>
+    <Description>This is group name</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15007</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">group-1</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15009" BrowseName="1:Value" ParentNodeId="ns=1;i=15007" DataType="Int32">
+    <DisplayName>Value</DisplayName>
+    <Description>Number of person in a group</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15007</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">10</Int32>
+    </Value>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=15010" BrowseName="1:ExampleContainer">
+    <DisplayName>ExampleContainer</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=15011</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=15006</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=15011" BrowseName="1:MyGrouping" ParentNodeId="ns=1;i=15010">
+    <DisplayName>MyGrouping</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15012</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15013</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=15003</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15010</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=15012" BrowseName="1:Name" ParentNodeId="ns=1;i=15011" DataType="String">
+    <DisplayName>Name</DisplayName>
+    <Description>This is group name</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15011</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">group-1</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15013" BrowseName="1:Value" ParentNodeId="ns=1;i=15011" DataType="Int32">
+    <DisplayName>Value</DisplayName>
+    <Description>Number of person in a group</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15011</Reference>
+    </References>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">10</Int32>
+    </Value>
+  </UAVariable>
+  <UADataType NodeId="ns=1;i=15014" BrowseName="1:Ipv4Address">
+    <DisplayName>Ipv4Address</DisplayName>
+    <Description>IPv4 address</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=12</Reference>
+    </References>
+  </UADataType>
+  <UAVariable NodeId="ns=1;i=15015" BrowseName="1:ListOfPorts" DataType="String" ValueRank="-2">
+    <DisplayName>ListOfPorts</DisplayName>
+    <Description>List of ports the server to use</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=15016" BrowseName="1:UpdateSoftware">
+    <DisplayName>UpdateSoftware</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15017</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15018</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=15017" BrowseName="InputArguments" ParentNodeId="ns=1;i=15016" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>InputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15016</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SoftwareInputPath</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Locale>
+                </Locale>
+                <Text>Software input path</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15018" BrowseName="OutputArguments" ParentNodeId="ns=1;i=15016" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>OutputArguments</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15016</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>SoftwareOutputPath</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Locale>
+                </Locale>
+                <Text>Software output path</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15019" BrowseName="1:simex" SymbolicName="simple-example_BinarySchema" DataType="ByteString">
+    <DisplayName>simex</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15021</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15022</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">i=93</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+    </References>
+    <Value>
+      <ByteString xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PG9wYzpUeXBlRGljdGlvbmFyeQ0KICB4bWxuczpvcGM9Imh0dHA6Ly9vcGNmb3VuZGF0aW9uLm9y
+Zy9CaW5hcnlTY2hlbWEvIg0KICB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1M
+U2NoZW1hLWluc3RhbmNlIg0KICB4bWxuczp1YT0iaHR0cDovL29wY2ZvdW5kYXRpb24ub3JnL1VB
+LyINCiAgeG1sbnM6dG5zPSJodHRwOi8vZXhhbXBsZS5jb20vc2ltcGxlLWV4YW1wbGUvIg0KICBE
+ZWZhdWx0Qnl0ZU9yZGVyPSJMaXR0bGVFbmRpYW4iDQogIFRhcmdldE5hbWVzcGFjZT0iaHR0cDov
+L2V4YW1wbGUuY29tL3NpbXBsZS1leGFtcGxlLyINCj4NCg0KICA8b3BjOk9wYXF1ZVR5cGUgTmFt
+ZT0iSXB2NEFkZHJlc3MiPg0KICAgIDxvcGM6RG9jdW1lbnRhdGlvbj5JUHY0IGFkZHJlc3M8L29w
+YzpEb2N1bWVudGF0aW9uPg0KICA8L29wYzpPcGFxdWVUeXBlPg0KDQo8L29wYzpUeXBlRGljdGlv
+bmFyeT4=</ByteString>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15021" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=15019" DataType="String">
+    <DisplayName>NamespaceUri</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15019</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">http://example.com/simple-example/</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15022" BrowseName="Deprecated" ParentNodeId="ns=1;i=15019" DataType="Boolean">
+    <DisplayName>Deprecated</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15019</Reference>
+    </References>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">true</Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15023" BrowseName="1:simex" SymbolicName="simple-example_XmlSchema" DataType="ByteString">
+    <DisplayName>simex</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15025</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15026</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">i=92</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=72</Reference>
+    </References>
+    <Value>
+      <ByteString xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">PHhzOnNjaGVtYQ0KICB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEi
+DQogIHhtbG5zOnVhPSJodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvVUEvMjAwOC8wMi9UeXBlcy54
+c2QiDQogIHhtbG5zOnRucz0iaHR0cDovL2V4YW1wbGUuY29tL3NpbXBsZS1leGFtcGxlLyINCiAg
+dGFyZ2V0TmFtZXNwYWNlPSJodHRwOi8vZXhhbXBsZS5jb20vc2ltcGxlLWV4YW1wbGUvIg0KICBl
+bGVtZW50Rm9ybURlZmF1bHQ9InF1YWxpZmllZCINCj4NCg0KICA8eHM6ZWxlbWVudCBuYW1lPSJJ
+cHY0QWRkcmVzcyIgdHlwZT0ieHM6c3RyaW5nIiAvPg0KDQo8L3hzOnNjaGVtYT4=</ByteString>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15025" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=15023" DataType="String">
+    <DisplayName>NamespaceUri</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15023</Reference>
+    </References>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">http://example.com/simple-example/</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15026" BrowseName="Deprecated" ParentNodeId="ns=1;i=15023" DataType="Boolean">
+    <DisplayName>Deprecated</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15023</Reference>
+    </References>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">true</Boolean>
+    </Value>
+  </UAVariable>
+</UANodeSet>

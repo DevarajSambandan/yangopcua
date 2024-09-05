@@ -8,13 +8,16 @@ Private 5G networks, also referred to as Non-Public Networks, have become the de
 
 **OPC UA NodeSet2 XML generation from YANG Model**
 
-Generation of the OPC UA Information model from the YANG schema involves a two-step approach. First, the YANG file is passed to the pyang opc-ua plugin to generate the OPC UA model design XML file that conforms to the schema defined in the UA Model Design.XSD. Then, the OPC UA model design XML file is passed to the OPC foundation model compiler to generate the OPC UA NodeSet2 XML Files and different language SDK files.
+Generation of the OPC UA Information model from the YANG schema involves a two-step approach. First, the YANG file is passed to the pyang opc-ua plugin to generate the OPC UA model design XML file that conforms to the schema defined in the UA Model Design.XSD. Then, the OPC UA model design XML file is passed to the OPC foundation model compiler to generate the OPC UA NodeSet2 XML Files.
 
 ![](images/yangopcua.001.png) 
 
-OPC UA Model Design to OPC UA NodeSet2 XML File generation
+Step 1: YANG to OPC UA Model Design File Generation
 
 $ pyang -f opc_ua inputfiles/simple-example.yang -o generatedfiles/simple-example-model.xml
+
+
+Step 2: OPC UA Model Design to OPC UA NodeSet2 XML File generation
 
 
 $ /app/Opc.Ua.ModelCompiler.exe -console -d2 generatedfiles/simple-example-model.xml -cg generatedfiles/uamodel-generatedfiles/simple-example-model.csv -o2 generatedfiles/uamodel-generatedfiles/
@@ -22,4 +25,24 @@ $ /app/Opc.Ua.ModelCompiler.exe -console -d2 generatedfiles/simple-example-model
 
 **OPC UA – pyang plugin**
 
-Static YANG to OPC UA Model Design Generator is developed based on open-source component pyang and pyang [uml plugin](https://github.com/mbj4668/pyang/blob/master/pyang/plugins/uml.py). The pyang UML plug-in generates a UML class diagram from the YANG file. The YANG parsing logic defined in UML plug-in code is extended, and a new plugin called opcua plugin is created to generate the OPC UA model design file from the YANG File. The opc-ua pyang plugin logic for the generation of OPC UA model design file is based on the YANG to OPC UA mapping developed by the authors. This opcua plugin code will be delivered to pyang project once it is fully validated with all scenarios.
+Static YANG to OPC UA Model Design Generator is developed based on open-source component pyang. A new plugin called opcua plugin is created to generate the OPC UA model design file from the YANG File. The opc-ua pyang plugin logic for the generation of OPC UA model design file is based on the YANG to OPC UA mapping developed by the authors. This opcua plugin code will be delivered to pyang project once it is fully validated with all scenarios.
+
+**Procedure to use the opc ua pyang plugin till the code to delivered to pyang repo**
+
+Install Pyang in your workspace
+
+# pip install pyang
+
+Clone the pyang repository to your workspace 
+
+  git clone https://github.com/mbj4668/pyang.git
+  cd pyang
+  
+Copy the opc ua plugin(https://github.com/DevarajSambandan/yangopcua/blob/main/plugin/opc_ua.py) file from this yangopcua repository  to your cloned workspace under pyang/plugins folder then run following command to update the opcua plugin into pyang installed in your workspace. 
+  
+  pip install -e .
+  
+YANG to OPC UA Model Design File Generation
+
+$ pyang -f <input yang file> -o <output opc ua model design xml file>
+

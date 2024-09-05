@@ -1,0 +1,10 @@
+Bag,15002,Object
+BagType,15001,ObjectType
+ExampleContainer,15010,Object
+ExampleContainerType,15006,ObjectType
+Ipv4Address,15014,DataType
+ListOfPorts,15015,Variable
+MyGroupingType,15003,ObjectType
+simple-example_BinarySchema,15019,Variable
+simple-example_XmlSchema,15023,Variable
+UpdateSoftware,15016,Method
