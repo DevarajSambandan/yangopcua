@@ -14,13 +14,13 @@ Generation of the OPC UA Information model from the YANG schema involves a two-s
 
 Step 1: YANG to OPC UA Model Design File Generation
 
-$ pyang -f opc_ua inputfiles/simple-example.yang -o generatedfiles/simple-example-model.xml
+ $ pyang -f opc_ua inputfiles/simple-example.yang -o generatedfiles/simple-example-model.xml
 
 
 Step 2: OPC UA Model Design to OPC UA NodeSet2 XML File generation
 
 
-$ /app/Opc.Ua.ModelCompiler.exe -console -d2 generatedfiles/simple-example-model.xml -cg generatedfiles/uamodel-generatedfiles/simple-example-model.csv -o2 generatedfiles/uamodel-generatedfiles/
+ $ /app/Opc.Ua.ModelCompiler.exe -console -d2 generatedfiles/simple-example-model.xml -cg generatedfiles/uamodel-generatedfiles/simple-example-model.csv -o2 generatedfiles/uamodel-generatedfiles/
 
 
 **OPC UA – pyang plugin**
@@ -31,18 +31,18 @@ Static YANG to OPC UA Model Design Generator is developed based on open-source c
 
 Install Pyang in your workspace
 
-# pip install pyang
+   $ pip install pyang
 
 Clone the pyang repository to your workspace 
 
-  git clone https://github.com/mbj4668/pyang.git
-  cd pyang
+  $ git clone https://github.com/mbj4668/pyang.git
+  $ cd pyang
   
 Copy the opc ua plugin(https://github.com/DevarajSambandan/yangopcua/blob/main/plugin/opc_ua.py) file from this yangopcua repository  to your cloned workspace under pyang/plugins folder then run following command to update the opcua plugin into pyang installed in your workspace. 
   
-  pip install -e .
+  $ pip install -e .
   
 YANG to OPC UA Model Design File Generation
 
-$ pyang -f <input yang file> -o <output opc ua model design xml file>
+ $ pyang -f <input yang file> -o <output opc ua model design xml file>
 
